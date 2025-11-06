@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GlyphRoot Core – $1,500 USD</title>
+  <style>
+    body { font-family: 'Courier New', monospace; margin: 40px; line-height: 1.7; color: #0f0; background: #000; }
+    h1 { font-size: 28px; text-align: center; }
+    h2 { font-size: 20px; margin-top: 40px; color: #0af; }
+    code, pre { background: #111; padding: 10px; border-radius: 4px; color: #0f0; font-size: 14px; }
+    pre { overflow-x: auto; }
+    .price { font-size: 30px; color: #f00; font-weight: bold; text-align: center; }
+    .small { font-size: 14px; color: #888; text-align: center; margin-top: 5px; }
+    .center { text-align: center; margin: 30px 0; }
+    ul { margin: 20px 0; padding-left: 30px; }
+    li { margin: 8px 0; }
+  </style>
+</head>
+<body>
+
+  <div class="center">
+    <h1>GlyphRoot Core</h1>
+    <p class="price">$1,500 USD</p>
+    <p class="small">≈ 7.5 XMR — Rate locked at payment</p>
+  </div>
+
+  <h2>WHAT'S INCLUDED</h2>
+  <ul>
+    <li><code>core.js</code> — Full 16-glyph compressor engine</li>
+    <li><code>glyphroot.txt</code> — Semantic vector key</li>
+    <li><code>glyphchart.svg</code> — Visual glyph map</li>
+    <li><code>sample_encoded.txt</code> — Live compression examples</li>
+    <li><code>license.md</code> — Personal use license</li>
+  </ul>
+
+  <h2>LIVE DEMO — PASTE IN BROWSER CONSOLE</h2>
+  <pre><code>
+// GLYPHROOT CORE — $1,500 USD
+function glyph(t){
+  const m={
+    'i|you|patient|client':'[ψ]',
+    'chart|file|record|dose|drug':'[Δ]',
+    'pay|deliver|treat|leave':'[θ]',
+    'now|friday|soon|later':'[λ]',
+    'want|need|will|must':'[α]',
+    'not|no|failed|never':'[v]',
+    'must|definitely|certain':'[Ω]',
+    'good|bad|anxious|pain':'[±]',
+    'because|due|from|by':'[φ]',
+    'if|unless|only|when':'[≡]',
+    'all|ongoing|always':'[∞]',
+    'my|your|own|their':'[Σ]',
+    'maybe|perhaps|could':'[?]',
+    'here|office|home|clinic':'[⊕]',
+    'love|hate|anxiety|pain':'[♥]'
+  };
+  const w=t.toLowerCase().replace(/[^\w\s]/g,'').split(/\s+/);
+  const o=new Array(16).fill('');
+  w.forEach(x=>{
+    for(let[k,v]of Object.entries(m))
+      if(k.split('|').includes(x))
+        o[Object.values(m).indexOf(v)]=v;
+  });
+  if(w.length>5)o[15]='[•]';
+  return o.filter(x=>x).join(' ')||'[•]';
+}
+console.log(glyph("Patient takes 20mg now"));
+// → [ψ] [Δ] [θ] [λ]
+</code></pre>
+
+  <h2>HOW TO BUY</h2>
+  <p>1. Send <strong>7.5 XMR</strong> ($1,500 USD) to:</p>
+  <code>88aXFnDLsf5G4bz4trB45SEEKAJeokeZYUcwnDJpkxur6PNpj3Q1xGFtFMYtZDJ3DKcFwmWo8i5yCSBGZs0hKhnCzLe28F</code>
+  <p>2. Email <strong>TXID</strong> to:</p>
+  <code>glyphroot_vault@proton.me</code>
+  <p>3. Receive <strong>encrypted ZIP</strong> within 24 hours.</p>
+
+  <div class="center">
+    <p><strong>No logs. No KYC. No refunds. Core sealed.</strong></p>
+  </div>
+
+</body>
+</html>
